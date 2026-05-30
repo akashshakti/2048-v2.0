@@ -386,6 +386,42 @@ background:#edc53f;
 background:#edc22e;
 }
 
+
+.appHeader{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:15px;
+
+margin-bottom:20px;
+
+}
+
+.appLogo{
+
+width:70px;
+height:70px;
+
+border-radius:18px;
+
+object-fit:cover;
+
+box-shadow:0 4px 12px rgba(0,0,0,.3);
+
+}
+
+.appHeader h1{
+
+margin:0;
+
+font-size:clamp(32px,5vw,48px);
+
+}
+
+
+
 /* ========================= */
 /* MOBILE */
 /* ========================= */
