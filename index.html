@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>2048 Ultimate v2.0</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>2048 Ultimate</h1>
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button onclick="newGame()">
+                🎮 New Game
+            </button>
+
+            <button onclick="undoMove()">
+                ↩ Undo
+            </button>
+
+            <button onclick="toggleMode()">
+                🌈 Dark / Light
+            </button>
+
+            <button onclick="switchMode()">
+                ⚡ Mode :
+                <span id="modeText">Single</span>
+            </button>
+
+        </div>
+
+        <!-- Score Area -->
+
+        <div class="scorePanel">
+
+            <div class="scoreCard">
+
+                <span>Score</span>
+
+                <strong id="score">0</strong>
+
+            </div>
+
+            <div class="scoreCard">
+
+                <span>High Score</span>
+
+                <strong id="highScore">0</strong>
+
+            </div>
+
+            <div class="scoreCard">
+
+                <span>Highest Tile</span>
+
+                <strong id="highTile">0</strong>
+
+            </div>
+
+        </div>
+
+        <!-- Instructions -->
+
+        <div class="info">
+
+            <p>
+                Desktop :
+                Arrow Keys / WASD
+            </p>
+
+            <p>
+                Mobile :
+                Swipe to move
+            </p>
+
+        </div>
+
+        <!-- Game Boards -->
+
+        <div id="gameArea"></div>
+
+    </div>
+
+    <!-- Win Modal -->
+
+    <div id="winModal" class="modal hidden">
+
+        <div class="modalContent">
+
+            <h2>
+                🏆 You Win !
+            </h2>
+
+            <p>
+                Congratulations! You reached 2048.
+            </p>
+
+            <div class="modalButtons">
+
+                <button onclick="continueGame()">
+                    Continue
+                </button>
+
+                <button onclick="newGame()">
+                    Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Game Over Modal -->
+
+    <div id="gameOverModal" class="modal hidden">
+
+        <div class="modalContent">
+
+            <h2>
+                💀 Game Over
+            </h2>
+
+            <p>
+                No more moves available.
+            </p>
+
+            <div class="modalButtons">
+
+                <button onclick="undoMove()">
+                    ↩ Undo
+                </button>
+
+                <button onclick="newGame()">
+                    🔄 Play Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Sounds -->
+
+    <audio id="moveSound" preload="auto">
+        <source src="move.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="mergeSound" preload="auto">
+        <source src="merge.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="winSound" preload="auto">
+        <source src="win.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="gameOverSound" preload="auto">
+        <source src="gameover.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
