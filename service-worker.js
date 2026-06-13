@@ -1,4 +1,4 @@
-const CACHE_NAME = "maze-v1";
+const CACHE_NAME = "2048-v2";
 
 const urlsToCache = [
   "/",
