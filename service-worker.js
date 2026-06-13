@@ -5,9 +5,10 @@ const urlsToCache = [
   "/index.html",
   "/style.css",
   "/script.js",
-  "/click.mp3",
-  "/wrong.mp3",
-  "/win.mp3",
+  "/merge.aac",
+  "/gameover.wav",
+  "/move.wav",
+  "/win.wav",
   "/manifest.json"
 ];
 
